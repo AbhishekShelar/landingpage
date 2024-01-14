@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #f5f5f5;
 }
 
 header {
@@ -14,6 +15,11 @@ header {
 
 h1 {
     margin: 0;
+    font-size: 2.5em;
+}
+
+p {
+    font-size: 1.2em;
 }
 
 .main-content {
@@ -23,12 +29,13 @@ h1 {
 
 .cta-button {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 15px 30px;
     margin-top: 20px;
     background-color: #3498db;
     color: #ecf0f1;
     text-decoration: none;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
@@ -48,21 +55,30 @@ form {
 label {
     display: block;
     margin-bottom: 10px;
+    font-size: 1.2em;
 }
 
 input {
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #3498db;
 }
 
 button {
     background-color: #3498db;
     color: #ecf0f1;
-    padding: 10px 20px;
+    padding: 15px 30px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -74,4 +90,20 @@ footer {
     color: #ecf0f1;
     text-align: center;
     padding: 20px;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+    p {
+        font-size: 1em;
+    }
+    .cta-button,
+    button {
+        padding: 10px 20px;
+    }
+    input {
+        padding: 10px;
+    }
 }
